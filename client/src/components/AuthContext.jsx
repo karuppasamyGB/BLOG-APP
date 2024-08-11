@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:3500/login",
+        "https://blog-app-4ddw.onrender.com/login",
         formData,
         { withCredentials: true }
       );
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:3500/register",
+        "https://blog-app-4ddw.onrender.com/register",
         formData,
         { withCredentials: true }
       );

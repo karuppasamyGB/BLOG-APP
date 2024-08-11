@@ -17,7 +17,7 @@ const EditBlog = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3500/api/blog/posts/${id}`
+          `https://blog-app-4ddw.onrender.com/api/blog/posts/${id}`
         );
         setPost(response.data);
       } catch (error) {

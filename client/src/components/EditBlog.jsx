@@ -39,7 +39,7 @@ const EditBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3500/api/blog/edit/${id}`, post);
+      await axios.put(`https://blog-app-4ddw.onrender.com/api/blog/edit/${id}`, post);
       navigate("/");
     } catch (error) {
       console.error("Error updating post", error);

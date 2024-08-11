@@ -52,23 +52,6 @@ router.put("/edit/:commentId", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-// router.put("/edit/:id", async (req, res) => {
-//   try {
-//     // Find the comment by ID and update it with the new data
-//     const updatedComment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
-//       new: true, // This option returns the updated document
-//     });
 
-//     // If the comment was found and updated, send it back in the response
-//     if (updatedComment) {
-//       res.status(200).json(updatedComment);
-//     } else {
-//       res.status(404).json({ error: "Comment not found" });
-//     }
-//   } catch (error) {
-//     // Handle any errors that occur during the process
-//     res.status(500).json({ error: error.message });
-//   }
-// });
 
 module.exports = router;

@@ -27,7 +27,7 @@ const CommentForm = ({ postId, onCommentAdded, comments, setComments }) => {
     }
 
     try {
-      await axios.post("http://localhost:3500/api/comments/add", {
+      await axios.post("https://blog11.onrender.com/api/comments/add", {
         postId,
         user: user.username,
         comment,
@@ -41,7 +41,7 @@ const CommentForm = ({ postId, onCommentAdded, comments, setComments }) => {
 
   const handleCommentDelete = async (commentId) => {
     try {
-      await axios.delete(`http://localhost:3500/api/comments/${commentId}`);
+      await axios.delete(`https://blog11.onrender.com/api/comments/${commentId}`);
       setComments(comments.filter((comment) => comment._id !== commentId));
     } catch (error) {
       console.error("Error deleting comment:", error);
@@ -55,7 +55,7 @@ const CommentForm = ({ postId, onCommentAdded, comments, setComments }) => {
 
   const handleCommentUpdate = async () => {
     try {
-      await axios.put(`http://localhost:3500/api/comments/edit/${editingCommentId}`, {
+      await axios.put(`https://blog11.onrender.com/api/comments/edit/${editingCommentId}`, {
         comment: editingCommentText,
       });
       

@@ -30,7 +30,7 @@ const CreateBlog = () => {
     };
 
     try {
-      await axios.post('http://localhost:3500/api/blog/create', newPost);
+      await axios.post('https://blog11.onrender.com/api/blog/create', newPost);
       navigate('/');
     } catch (error) {
       console.error('There was an error creating the blog post!', error);

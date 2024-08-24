@@ -14,7 +14,7 @@ const PostDetail = () => {
   const fetchPost = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3500/api/blog/posts/${id}`
+        `https://blog11.onrender.com/api/blog/posts/${id}`
       );
       setPost(response.data);
     } catch (err) {
@@ -27,7 +27,7 @@ const PostDetail = () => {
   const fetchComments = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3500/api/comments/${id}`
+        `https://blog11.onrender.com/api/comments/${id}`
       );
       setComments(response.data);
     } catch (err) {
